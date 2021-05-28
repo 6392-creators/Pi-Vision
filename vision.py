@@ -1,17 +1,20 @@
-from cscore import CameraServer
+from cscore import *
 import cv2
 import numpy as np
+
+camWidth = 1280
+camHeight = 960
 
 cs = CameraServer.getInstance()
 cs.enableLogging()
 
 camera = cs.startAutomaticCapture()
-camera.setResolution(width, height)
+camera.setResolution(camWidth, camHeight)
 
 sink = cs.getVideo()
 
 while True:
-   time, input_img = cvSink.grabFrame(input_img)
+   time, input_img = videoSink.grabFrame(input_img)
 
    if time == 0: # There is an error
       continue
