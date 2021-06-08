@@ -14,7 +14,7 @@ camera.setResolution(camWidth, camHeight)
 sink = cs.getVideo()
 
 while True:
-   time, input_img = videoSink.grabFrame(input_img)
+   time, input_img 
 
    if time == 0: # There is an error
       continue
